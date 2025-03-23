@@ -16,7 +16,7 @@ body {
 
   @font-face {
     font-family: "general";
-    src: url("/fonts/general-woff2") format("woff2");
+    src: url("/fonts/general.woff2") format("woff2");
   }
 
   @font-face {
@@ -65,7 +65,7 @@ body {
 }
 
 .floating-nav {
-  @apply bg-black rounded-lg border;
+  @apply bg-black/70 rounded-lg border;
 }
 
 .absolute-center {
@@ -102,11 +102,15 @@ body {
 }
 
 .animated-word {
-  @apply special-font font-zentry font-black opacity-0;
+  @apply font-zentry font-black opacity-0;
   transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
   transform-origin: 50% 50% -150px !important;
   will-change: opacity, transform;
-  
+}
+
+.animated-word b{
+  font-family: "Zentry";
+  font-feature-settings: "ss01" on;
 }
 
 .bento-tilt_1 {
@@ -161,7 +165,7 @@ body {
 }
 
 .indicator-line {
-  @apply h-1 w-px rounded-full bg-white transition-all duration-200 ease-in-out;
+  @apply h-1.5 w-px rounded-full bg-white transition-all duration-200 ease-in-out;
 }
 
 .indicator-line.active {
